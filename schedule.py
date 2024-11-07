@@ -65,21 +65,29 @@ def intersect_slots(slot_lists):
 
 def find_common_free_times(busy_schedule, working_period, duration_of_meeting):
     # Use the function timedelta in library datetime to convert the minutes in duration_of_meeting for easier comparison.
+    # This makes it easier to narrow the time_intervals that people have a common_free_slot to the duration_of_meeting
+    # This allows for more harder, complex comparisons of "duration of meetings" such as 13, 17, 46 minutes to pass through.
     duration_of_meeting = timedelta(minutes=duration_of_meeting)
     # Create a list to hold the free time slots for all people.
     member_free_times = []
     
     # Iterate over each person's busy_schedule to compute their free time slots
     for i, slots in enumerate(busy_schedule):
-        # Call the 
+        # Convert the time slots and lists of strings into datetime objects/tuples.
         login, logout = map(parse_time, working_period[i])
         member_slots = [(parse_time(start), parse_time(end)) for start, end in slots]
         
+        # Input function for __main__:
+        # find the free time slots of the members and append it to a list.
         free_slots = calculate_free_slots(member_slots, login, logout)
         member_free_times.append(free_slots)
-        
+    
+    # Find the common free times of all the members after calling for the calculated member_free_times 
     common_free_times = intersect_slots(member_free_times)
     
+    # Create a condition where the available free time of the members must last for 'duration_of_meeting' 
     result = [(start, end) for start, end in common_free_times if (end - start) >= duration_of_meeting]
     
+    # Output function for __main__: 
+    # Reconverts results to a readable format and returns the complete list of both the available free times 
     return [[start.strftime("%H:%M"), end.strftime("%H:%M")] for start, end in result]
