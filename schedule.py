@@ -75,7 +75,7 @@ def find_common_free_times(busy_schedule, working_period, duration_of_meeting):
     for i, slots in enumerate(busy_schedule):
         # Convert the time slots and lists of strings into datetime objects/tuples.
         login, logout = map(parse_time, working_period[i])
-        member_slots = [(parse_time(start), parse_time(end)) for start, end in slots]
+        member_slots = [(parse_time(login), parse_time(logout)) for login, logout in slots]
         
         # Input function for __main__:
         # find the free time slots of the members and append it to a list.
@@ -86,8 +86,8 @@ def find_common_free_times(busy_schedule, working_period, duration_of_meeting):
     common_free_times = intersect_slots(member_free_times)
     
     # Create a condition where the available free time of the members must last for 'duration_of_meeting' 
-    result = [(start, end) for start, end in common_free_times if (end - start) >= duration_of_meeting]
+    result = [(login, logout) for login, logout in common_free_times if (logout - login) >= duration_of_meeting]
     
     # Output function for __main__: 
     # Reconverts results to a readable format and returns the complete list of both the available free times 
-    return [[start.strftime("%H:%M"), end.strftime("%H:%M")] for start, end in result]
+    return [[login.strftime("%H:%M"), logout.strftime("%H:%M")] for login, logout in result]
