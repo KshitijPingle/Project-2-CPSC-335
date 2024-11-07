@@ -4,6 +4,7 @@ Repo for CPSC 335 Project 2
 ## Group Members
 PLEASE ADD YOUR NAMES HERE  
 Kshitij Pingle
+Timothy Tran
 
 ## I/O
 Input : A text file with 2 or more arrays representing schedule of group members  
