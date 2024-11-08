@@ -3,10 +3,25 @@ Repo for CPSC 335 Project 2
 
 ## Group Members
 PLEASE ADD YOUR NAMES HERE  
-Kshitij Pingle
+Kshitij Pingle  
 Timothy Tran
 
-## I/O
-Input : A text file with 2 or more arrays representing schedule of group members  
-        
-Output : A text file with 1 array representing intervals where group members are free for a meeting for a given minimum duration
+## JSON Input File
+A JSON array with all test cases. Length of JSON array represents number of tests. Each subarray is one test case.  
+The JSON input file is maintained in the following manner:-  
+\[test1, test2, ... \]  
+test = \[person1, person2, ..., duration_of_meeting\]  
+person =  {"Schedule" : \[...\], "DailyAct" : \[...\]}  
+
+
+## Output.txt
+Prints number of test cases performed and output for each test case  
+
+### Example Output
+Number of Tests: 4  
+
+Test Case 1 Output:  
+[['10:30', '12:00'], ['13:30', '14:00'], ['15:00', '16:00'], ['18:00', '18:30']]  
+
+Test Case 2 Output:  
+[['15:00', '16:00'], ['17:00', '18:00']]  
