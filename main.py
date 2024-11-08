@@ -29,4 +29,6 @@ busy_slots = [person1_schedule, person2_schedule]
 working_period = [person1_DailyAct, person2_DailyAct]
 
 common_free_times = find_common_free_times(busy_slots, working_period, duration_of_meeting)
-print(common_free_times)
+
+with open("output.txt", "w") as f:
+    f.write(str(common_free_times))
