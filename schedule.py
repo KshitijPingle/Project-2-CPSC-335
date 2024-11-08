@@ -1,10 +1,14 @@
 from datetime import datetime, timedelta    
 
 def parse_time(time_str):
+    """Convert a string in the format HH:MM to a datetime object."""
+
     # Using the datetime library, we can quickly compute the time where 60m = 1hr.
     return datetime.strptime(time_str, "%H:%M")
 
 def calculate_free_slots(busy_intervals, login, logout):
+    """Calculate the free time slots between busy_intervals and the working period of a person."""
+
     # Create a empty list to record "free" times the two people are allowed to work together.
     free_slots = []
     current_login = login
@@ -27,6 +31,8 @@ def calculate_free_slots(busy_intervals, login, logout):
     return free_slots
 
 def intersect_slots(slot_lists):
+    """Add a suitable docstring here."""
+    
     # Allow the first person's free available slot time as the starting point of our iteration.
     common_slots = slot_lists[0]
     
@@ -64,6 +70,8 @@ def intersect_slots(slot_lists):
     return updated_common_slots
 
 def find_common_free_times(busy_schedule, working_period, duration_of_meeting):
+    """Find the common free time slots of all the members to accomadate a meeting."""
+
     # Use the function timedelta in library datetime to convert the minutes in duration_of_meeting for easier comparison.
     # This makes it easier to narrow the time_intervals that people have a common_free_slot to the duration_of_meeting
     # This allows for more harder, complex comparisons of "duration of meetings" such as 13, 17, 46 minutes to pass through.
