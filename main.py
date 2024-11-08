@@ -30,7 +30,3 @@ working_period = [person1_DailyAct, person2_DailyAct]
 
 common_free_times = find_common_free_times(busy_slots, working_period, duration_of_meeting)
 print(common_free_times)
-
-
-# Correct Output
-    # [['10:30', '12:00'], ['13:30', '14:00'], ['15:00', '16:00']]

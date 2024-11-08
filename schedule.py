@@ -13,15 +13,17 @@ def calculate_free_slots(busy_intervals, login, logout):
     free_slots = []
     current_login = login
     
+    busy_intervals = sorted(busy_intervals)
+    
     # Iterate through each busy_intervals that the people have.
-    for login, logout in busy_intervals:
+    for start, end in busy_intervals:
         
         # Append the free time between current time and the start of the busy time slot.
-        if current_login < login:
-            free_slots.append((current_login, login))
+        if current_login < start:
+            free_slots.append((current_login, start))
             
         # Update the iteration to start AFTER a busy_interval, to ensure that we don't iterate through a busy_interval.
-        current_login = max(current_login, logout)
+        current_login = max(current_login, end)
         
     # If there are no more busy_intervals, however there are still time remaining before a person clocks out, add the remaining interval.
     if current_login < logout:
@@ -66,8 +68,10 @@ def intersect_slots(slot_lists):
                 # Iterate through the second person's free time slots
                 j += 1
         
+        common_slots = updated_common_slots
+
     # Return the new updated_common_slots
-    return updated_common_slots
+    return common_slots
 
 def find_common_free_times(busy_schedule, working_period, duration_of_meeting):
     """Find the common free time slots of all the members to accomadate a meeting."""
