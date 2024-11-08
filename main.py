@@ -13,7 +13,3 @@ working_period = [person1_DailyAct, person2_DailyAct]
 
 common_free_times = find_common_free_times(busy_slots, working_period, duration_of_meeting)
 print(common_free_times)
-
-# hello does this work
-def hello(hi):
-    return True
