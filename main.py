@@ -7,10 +7,10 @@ def arrange_meeting(input_file, output_file) :
         json_data = json.load(f)
 
     # 'json_data' is a list of all test cases
-    # 'data' is a list of test cases
-    # last element of 'data' is the duration of the meeting
-    # each 'data' object represents one test case
-        # data = [ {person1}, {person2}, ... , duration_of_meeting ]
+    # 'test' is a list of test cases
+        # last element of 'test' is the duration of the meeting
+        # each 'test' object represents one test case
+            # test = [ {person1}, {person2}, ... , duration_of_meeting ]
     # Each person dictionary has the following keys
         # person = { 'schedule': [ [busy_slot1], [busy_slot2], ... ], 'daily_activity': [start, end] }
 
@@ -20,7 +20,7 @@ def arrange_meeting(input_file, output_file) :
     # Run through all test cases
     for test in json_data :
         people = []
-        for i in range(len(test)):
+        for i in range( (len(test) - 1)) :
             people.append(test[i])
 
         # Doing this for now to test the json stuff
