@@ -62,8 +62,10 @@ def intersect_slots(slot_lists):
                 # Iterate through the second person's free time slots
                 j += 1
         
+        common_slots = updated_common_slots
+
     # Return the new updated_common_slots
-    return updated_common_slots
+    return common_slots
 
 def find_common_free_times(busy_schedule, working_period, duration_of_meeting):
     # Use the function timedelta in library datetime to convert the minutes in duration_of_meeting for easier comparison.
