@@ -18,7 +18,7 @@ person =  {"Schedule" : \[...\], "DailyAct" : \[...\]}
 Prints number of test cases performed and output for each test case  
 
 ### Example Output
-Number of Tests: 4  
+Number of Tests: 2  
 
 Test Case 1 Output:  
 [['10:30', '12:00'], ['13:30', '14:00'], ['15:00', '16:00'], ['18:00', '18:30']]  
