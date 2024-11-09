@@ -19,28 +19,25 @@ def arrange_meeting(input_file, output_file) :
 
     # Run through all test cases
     for test in json_data :
-        people = []
-        for i in range( (len(test) - 1)) :
-            people.append(test[i])
+        group = test[:-1] # This seperates the intended index of where duration_of_meeting will usually be at.
+        duration_of_meeting = int(test[-1]) # duration of meetings required for the people
 
-        # Doing this for now to test the json stuff
-        person1_schedule = people[0]['Schedule']
-        person1_DailyAct = people[0]['DailyAct']
+        # Created two individual lists in order to tackle multiple group members.
+        busy_schedule = []
+        working_period = []
 
-        person2_schedule = people[1]['Schedule']
-        person2_DailyAct = people[1]['DailyAct']
+        # Iterating through each "member" within our dictionary and appending their 'Schedule' and 'DailyAct' to busy_schedule, working_period list respectfully.
+        # This was to ensure that there can be multiple memebers within a group, not limiting to two individuals and having those two people only be compared.
+        for member in group:
+            busy_schedule.append(member['Schedule'])
+            working_period.append(member['DailyAct'])
 
-        # Last element of 'test' is always the duration of the meeting
-        duration_of_meeting = int(test[-1])
-
-        busy_slots = [person1_schedule, person2_schedule]
-        working_period = [person1_DailyAct, person2_DailyAct]
-
-        common_free_times = find_common_free_times(busy_slots, working_period, duration_of_meeting)
+        # Call function find_common_free_times with the new inputs busy_schedule, working_period, duration_of_meeting and find all the members common time to arrange a meeting
+        common_free_times = find_common_free_times(busy_schedule, working_period, duration_of_meeting)
         output_str += "\nTest Case " + str(test_num) + " Output:\n" + str(common_free_times) + "\n"
         test_num += 1
 
-    
+    # Print results in output.txt
     with open(output_file, "w") as f:
         f.write(output_str)
 # End of arrange_meeting() function
