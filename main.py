@@ -42,6 +42,5 @@ def arrange_meeting(input_file, output_file) :
         f.write(output_str)
 # End of arrange_meeting() function
 
-
 if (__name__ == "__main__") :
     arrange_meeting("input.json", "output.txt")
