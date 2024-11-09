@@ -5,6 +5,8 @@ Repo for CPSC 335 Project 2
 PLEASE ADD YOUR NAMES HERE  
 Kshitij Pingle  
 Timothy Tran
+Tyler Nguyen
+Elton Tran
 
 ## JSON Input File
 A JSON array with all test cases. Length of JSON array represents number of tests. Each subarray is one test case.  
