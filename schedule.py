@@ -36,7 +36,7 @@ def calculate_free_slots(busy_intervals, login, logout):
     return free_slots
 
 def intersect_slots(slot_lists):
-    """Add a suitable docstring here."""
+    """Find the common time slots between multiple people's schedules."""
     
     # Allow the first person's free available slot time as the starting point of our iteration.
     common_slots = slot_lists[0]
