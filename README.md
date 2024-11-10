@@ -2,7 +2,6 @@
 Repo for CPSC 335 Project 2
 
 ## Group Members
-PLEASE ADD YOUR NAMES HERE  
 Kshitij Pingle  
 Timothy Tran  
 Tyler Nguyen  
@@ -15,7 +14,7 @@ The JSON input file is maintained in the following manner:-
 test = \[person1, person2, ..., duration_of_meeting\]  
 person =  {"Schedule" : \[...\], "DailyAct" : \[...\]}  
 
-## Edge Cases
+### Edge Cases
 Test case 4, 5, 10 are our edge cases
 
 Test case 4 is testing for a case where NONE of the members within a group have a common time slot for a meeting to be arranges.  
