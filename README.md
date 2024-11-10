@@ -2,7 +2,6 @@
 Repo for CPSC 335 Project 2
 
 ## Group Members
-PLEASE ADD YOUR NAMES HERE  
 Kshitij Pingle  
 Timothy Tran  
 Tyler Nguyen  
@@ -15,12 +14,12 @@ The JSON input file is maintained in the following manner:-
 test = \[person1, person2, ..., duration_of_meeting\]  
 person =  {"Schedule" : \[...\], "DailyAct" : \[...\]}  
 
-## Edge Cases
+### Edge Cases
 Test case 4, 5, 10 are our edge cases
 
-Test case 4 is testing for a case where NONE of the members within a group have a common time slot for a meeting to be arranges.
-Test case 5 is testing for a case where two members within a group have the exact same Schedule and Daily Activity testing.
-Test case 10 is testing for a case where three memebers of a group do not have anything on their schedule.
+Test case 4 is testing for a case where NONE of the members within a group have a common time slot for a meeting to be arranges.  
+Test case 5 is testing for a case where two members within a group have the exact same Schedule and Daily Activity testing.  
+Test case 10 is testing for a case where three memebers of a group do not have anything on their schedule.  
 
 ## Output.txt
 Prints number of test cases performed and output for each test case  
