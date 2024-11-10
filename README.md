@@ -17,9 +17,9 @@ person =  {"Schedule" : \[...\], "DailyAct" : \[...\]}
 ### Edge Cases
 Test case 4, 5, 10 are our edge cases
 
-Test case 4 is testing for a case where NONE of the members within a group have a common time slot for a meeting to be arranges.  
-Test case 5 is testing for a case where two members within a group have the exact same Schedule and Daily Activity testing.  
-Test case 10 is testing for a case where three memebers of a group do not have anything on their schedule.  
+Test case 4 is testing for a case where NONE of the members within a group have a common time slot for a meeting to be arranged.  
+Test case 5 is testing for a case where two members within a group have the same exact Schedule and Daily Activity.  
+Test case 10 is testing for a case where three memebers of a group do not have anything on their Schedules.  
 
 ## Output.txt
 Prints number of test cases performed and output for each test case  
