@@ -13,6 +13,9 @@ def calculate_free_slots(busy_intervals, login, logout):
     free_slots = []
     current_login = login
     
+    # This function exists to ensure the chronological order of a member's schedule
+    # Based off of the Sample Inputs used, it is assumed that the input will already be put into chronological order
+    # Removing this function would make the function calculate_free_slots: O(n) instead of O(n*log(n))
     busy_intervals = sorted(busy_intervals)
     
     # Iterate through each busy_intervals that the people have.
@@ -51,7 +54,7 @@ def intersect_slots(slot_lists):
             # Classify the current time slots from each individual time slots.
             login1, logout1 = common_slots[i]
             login2, logout2 = slots[j]
-            
+
             # Find the latest_login and earlist logout between the two individual time slots.
             latest_login = max(login1, login2)
             earliest_logout = min(logout1, logout2)
