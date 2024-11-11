@@ -22,7 +22,7 @@ schedule.py
 input.json  
 output.txt  
 
-#### Once installed, 
+##### Once installed, 
 Open up input.json on any editing application. (VS code, Atom, Notepad)  
 Inputs must follow this format :
 #### [{"Schedule" : ["time", "time"], "DailyAct" : ["time", "time"]}, (duration_of_meetings)]
