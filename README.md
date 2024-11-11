@@ -22,7 +22,7 @@ schedule.py
 input.json  
 output.txt  
 
-##### Once installed, 
+#### Once installed, 
 Open up input.json on any editing application. (VS code, Atom, Notepad)  
 Inputs must follow this format :
 #### [{"Schedule" : ["time", "time"], "DailyAct" : ["time", "time"]}, (duration_of_meetings)]
@@ -31,7 +31,7 @@ The input "time" must be within ["0:00", "23:59"] to be a valid time.
 The input (duration_of_meetings) must be in minutes, (i.e. 2 hours = '120' minutes)  
 
 Once changes are made to 'input.json'
-Open up a terminal within this directory and run "python main.py" to run the program
+Open up a terminal within this directory and run "python main.py" to run the program 
 Changes will be made in 'output.txt'
 
 
