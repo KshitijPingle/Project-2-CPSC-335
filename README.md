@@ -27,6 +27,7 @@ Open up input.json on any editing application. (VS code, Atom, Notepad)
 Inputs must follow this format :
 #### [{"Schedule" : ["time", "time"], "DailyAct" : ["time", "time"]}, (duration_of_meetings)]
 Each {input} is considered a 'person' or a member within a group, you can have multiple members within an input as long as it respects the format.
+
 The input "time" must be within ["0:00", "23:59"] to be a valid time.
 The input (duration_of_meetings) must be in minutes, (i.e. 2 hours = '120' minutes)
 
