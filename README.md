@@ -32,7 +32,9 @@ The input (duration_of_meetings) must be in minutes, (i.e. 2 hours = '120' minut
 
 ### Executing program:
 #### Once changes are made to 'input.json',  
-Open up a terminal within this directory and run "python main.py" to run the program  
+Open up a terminal within this directory and run the following commands:  
+Windows - python main.py  
+Linux - python3 ./main.py  
 Changes will be made within 'output.txt'  
 
 ## Output.txt
