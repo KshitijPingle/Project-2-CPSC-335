@@ -14,7 +14,7 @@ The JSON input file is maintained in the following manner:-
 test = \[person1, person2, ..., duration_of_meeting\]  
 person =  {"Schedule" : \[...\], "DailyAct" : \[...\]}  
 
-### How to run our Program
+## How to run our Program
 First install every file within GitHub (files needed):
 
 main.py  
@@ -30,10 +30,9 @@ Each {input} is considered a 'person' or a member within a group, you can have m
 The input "time" must be within ["0:00", "23:59"] to be a valid time.  
 The input (duration_of_meetings) must be in minutes, (i.e. 2 hours = '120' minutes)  
 
-Once changes are made to 'input.json'
-Open up a terminal within this directory and run "python main.py" to run the program 
-Changes will be made in 'output.txt'
-
+#### Once changes are made to 'input.json',  
+Open up a terminal within this directory and run "python main.py" to run the program  
+Changes will be made in 'output.txt'  
 
 ## Output.txt
 Prints number of test cases performed and output for each test case  
