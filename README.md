@@ -22,7 +22,7 @@ schedule.py
 input.json  
 output.txt  
 
-#### Once installed, to make changes: (if changes are not needed skip down to 'Execute')
+#### Once installed, to make changes: (if changes are not needed skip down to 'Executing program')
 Open up input.json on any editing application. (VS code, Atom, Notepad)  
 Inputs must follow this format :
 #### [{"Schedule" : ["time", "time"], "DailyAct" : ["time", "time"]}, (duration_of_meetings)]
@@ -30,10 +30,10 @@ Each {input} is considered a 'person' or a member within a group, you can have m
 The input "time" must be within ["0:00", "23:59"] to be a valid time.  
 The input (duration_of_meetings) must be in minutes, (i.e. 2 hours = '120' minutes)  
 
-### Executing program
+### Executing program:
 #### Once changes are made to 'input.json',  
 Open up a terminal within this directory and run "python main.py" to run the program  
-Changes will be made in 'output.txt'  
+Changes will be made within 'output.txt'  
 
 ## Output.txt
 Prints number of test cases performed and output for each test case  
